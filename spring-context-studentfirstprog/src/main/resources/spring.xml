@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="s3" class="com.nareshit.model.Student">
+		<property name="hello" ref="s1" />
+	</bean>
+
+	<bean id="s4" class="com.nareshit.model.Student">
+		<constructor-arg index="0" ref="s2" />
+	</bean>
+	
+	
+	<bean id="s2" class="com.nareshit.model.Student">
+		<property name="address" value="Hyderabad" />
+		<constructor-arg index="0" value="Krishna-1" />
+
+		<constructor-arg index="1" value="Krishna-2" />
+	</bean>
+	<bean id="s1" class="com.nareshit.model.Student">
+		<property name="firstName" value="Ram1" />
+		<property name="lastName" value="Ram2" />
+		<property name="address" value="Hyderabad" />
+	</bean>
+
+
+
+
+
+
+
+
+
+
+</beans>
